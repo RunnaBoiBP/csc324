@@ -124,3 +124,7 @@ const cars = [
      made: "2017-10-31"
     }
 ];
+
+let myRandNum = cars.length * Math.random();
+let car = cars[Math.floor(myRandNum)];
+console.log(car.model);
