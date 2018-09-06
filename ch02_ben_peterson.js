@@ -1,7 +1,7 @@
 /*****************************************
- * 
- * Exercise 1
- * 
+ 
+             Exercise 1
+ 
  ****************************************/
 
 for (let i = 1; i <= 7; i++) {
@@ -9,16 +9,20 @@ for (let i = 1; i <= 7; i++) {
 }
 
 /****************************************
- * 
- * Exercise 2
- * 
+  
+              Exercise 2
+  
  ****************************************/
 
 /* Well, for starters I probably need a for loop with n going from 1 to 100. Then I should
-* probably have the count of n go up each iteration of the loop. Then, if n is divisible by 3, it
-* should print "Fizz", and if n is divisible by 5, it should print "Buzz". The hint says that the ||
-* operator should be used, and when I googled it I came across using it in the console.log function
-* to show the number or words depending on if it is divisible or not. */
+probably have the count of n go up each iteration of the loop. Then, if n is divisible by 3, it
+should print "Fizz", and if n is divisible by 5, it should print "Buzz". The hint says that the ||
+operator should be used, and when I googled it I came across using it in the console.log function
+to show the number or words depending on if it is divisible or not. The source I used for the logical
+operator OR can be found at:
+
+https://stackoverflow.com/questions/12331442/logical-or-in-javascript
+*/
 
 for (let n = 1; n <= 100; n++) {
   let output = "";
@@ -28,9 +32,9 @@ for (let n = 1; n <= 100; n++) {
 }
 
 /******************************************
-*
-* Exercise 3
-*
+
+             Exercise 3
+
 *******************************************/
 
 let size = 8;
