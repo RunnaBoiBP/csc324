@@ -107,24 +107,39 @@
 //     ));
 
 
-const cars = [
-    {
-     price: 55000,
-     model: "lexus",
-     made: "2018-09-04"
-    },
-    {
-     price: 95000,
-     model: "corvette",
-     made: "2020-01-01"
-    },
-    {
-     price: 150000,
-     model: "tesla",
-     made: "2017-10-31"
-    }
-];
+// const cars = [
+//     {
+//      price: 55000,
+//      model: "lexus",
+//      made: "2018-09-04"
+//     },
+//     {
+//      price: 95000,
+//      model: "corvette",
+//      made: "2020-01-01"
+//     },
+//     {
+//      price: 150000,
+//      model: "tesla",
+//      made: "2017-10-31"
+//     }
+// ];
 
-let myRandNum = cars.length * Math.random();
-let car = cars[Math.floor(myRandNum)];
-console.log(car.model);
+// let myRandNum = cars.length * Math.random();
+// let car = cars[Math.floor(myRandNum)];
+// console.log(car.model);
+
+const fetch = require('node-fetch');
+
+fetch('https://jsonplaceholder.typicode.com/todos/')
+    .then(response => response.json())
+    .then(handler2)
+
+    function handler1(json) {
+        console.log(json);
+    }
+    function handler2(json) { 
+        const user5 = json.filter(elem => elem.userId == 5);
+        const titles = user5.map(elem => elem.title);
+        console.log(titles);
+    }
