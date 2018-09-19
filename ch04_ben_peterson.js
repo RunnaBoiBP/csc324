@@ -37,6 +37,8 @@ function sum(rngSumArray) {
   
 //Here is the code to test my functions out
 
+console.log("Exercise 1- Sum and Range");
+console.log(" ");
 console.log("Running the Range function...");
 console.log(range(1,10));
 console.log(" ");
@@ -82,6 +84,8 @@ function reverseArray(initArray) {
 //called initArray which then gets pushed in reverse order to revArray. The following
 //output code will show this method.
 
+console.log("Exercise 2- Reversing an Array");
+console.log(" ");
 console.log("Here is the code for the reverseArray function...");
 console.log(" ");
 console.log("First, the initial array:");
