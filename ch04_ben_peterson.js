@@ -102,24 +102,39 @@ console.log(" ");
 //a new array with elements reversed from the initial, it will modify the existing
 //array by reversing its elements.
 
-function reverseArrayInPlace(array) {
-    for (let i = 0; i < Math.floor(array.length / 2); i++) {
-        let old = array[i];
-        array[i] = array[array.length - 1 - i];
-        array[array.length - 1 - i] = old;
+// function reverseArrayInPlace(array) {
+//     for (let i = 0; i < Math.floor(array.length / 2); i++) {
+//         let old = array[i];
+//         array[i] = array[array.length - 1 - i];
+//         array[array.length - 1 - i] = old;
+//       }
+// }
+
+function reverseArrayInPlace2() {
+    for (let i = 0; i < Math.floor(this.length / 2); i++) {
+        let old = this[i];
+        this[i] = this[this.length - 1 - i];
+        this[this.length - 1 - i] = old;
       }
-      return array;
 }
 
 //This function uses a for loop again, but this time it assigns the existing element
 //to a variable, old, and then assigns ot to a new spot in the opposite position from 
 //the original array.
 
-console.log("Here is the code for the reverseArrayInPlace function...");
-console.log(" ");
-let arrayValue = [1, 2, 3, 4, 5, 6, 7, 8];
-console.log("First, the initial array:");
-console.log(arrayValue);
-console.log(" ");
-console.log("Now, the reversed array");
-console.log(reverseArrayInPlace(arrayValue));
+// console.log("Here is the code for the reverseArrayInPlace function...");
+// console.log(" ");
+// let arrayValue = [1, 2, 3, 4, 5, 6, 7, 8];
+// console.log("First, the initial array:");
+// console.log(arrayValue);
+// console.log(" ");
+// console.log("Now, the reversed array");
+// reverseArrayInPlace(arrayValue);
+// console.log(arrayValue);
+
+//console.log(reverseArrayInPlace(arrayValue));
+
+Array.prototype.revPlace = reverseArrayInPlace2;
+const array2 = [4, 5, 6, 1];
+array2.revPlace();
+console.log(array2);
