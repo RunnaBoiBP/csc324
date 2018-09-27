@@ -47,4 +47,15 @@ let paragraph = document.querySelector("#names");
  }
  paragraph.appendChild(list);
 
+const linkParagraph = document.querySelector("#list");
+const list2 = document.createElement("ul");
+artists.forEach(function(artist) {
+  const listItem = document.createElement("li");
+  const anchor = document.createElement("a");
+  anchor.href = artist.link;
+  anchor.innerHTML = artist.name;
+  listItem.appendChild(anchor);
+  list2.appendChild(listItem);
+});
+linkParagraph.appendChild(list2)
 //The assignment is going to involve creating table rows instead of list items
