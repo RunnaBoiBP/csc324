@@ -8,7 +8,8 @@
 //original arrays.
 
 //Well, this one is really straightforward, so basically you just use
-//array.reduce and then the flat array is just a concat of the current array.
+//array.reduce to pass the current array in the function to combine the parts into
+//a whole and then the combined array is just a concat of the current array.
 
 //Array example from the book:
 let arrays = [[1, 2, 3], [4, 5], [6]];
@@ -20,7 +21,7 @@ console.log("Here are the arrays I wish to combine: ");
 console.log(arrays);
 console.log(" ");
 console.log("Now, Here is the flattened array using the reduce and concat method:");
-console.log(arrays.reduce((flat, current) => flat.concat(current), []));
+console.log(arrays.reduce((combined, current) => combined.concat(current), []));
 console.log(" ");
 
 
