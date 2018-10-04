@@ -1,0 +1,14 @@
+{
+	"index": {
+		"pageTitle": "Home",
+		"title": "HTML5 Boilerplate + Harp"
+	},
+	"about": {
+		"pageTitle": "About",
+		"title":  "About This Site"
+	},
+	"404": {
+		"pageTitle": "404",
+		"layout": false
+	}
+}

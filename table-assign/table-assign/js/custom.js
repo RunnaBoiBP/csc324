@@ -8,6 +8,9 @@
 
 // This function will process the data after it is received.
 
+let george = [];
+let bob = 3;
+
 function processArray(artists) {
   let contents = "";
 
@@ -16,7 +19,7 @@ function processArray(artists) {
   });
 
   const tab = document.querySelector("#bhangra");
-  tab.innerHTML = contents
+  tab.innerHTML = contents;
 }
 
 // Here is the request, with a handler function
@@ -24,13 +27,18 @@ function processArray(artists) {
 fetch('data/artists.json')
   .then(function(response){
     let stuff = response.json();
-    return stuff
+    return stuff;
   })
   .then(function(artists){
     let arr = [];
     for (abbr in artists) {
       arr.push(artists[abbr]);
+      george.push(artists[abbr]);
+      console.log(bob);
     }
   processArray(arr);
   });
+
+  console.log(george[0]);
+
   
