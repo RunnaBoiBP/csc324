@@ -34,6 +34,29 @@
   }
  ]
 
+
+// A function to generate the table's inner HTML
+function createBhangraTable(array) {
+  let contents =
+  `
+  <tr>
+    <th>Name</th>
+    <th>Date of Birth</th>
+    <th>Link</th>
+  </tr>
+  `;
+  artists.forEach(function(artist) {
+      contents += "<tr>";
+      contents += `<td>${artist.name}</td>`;
+      contents += `<td>${artist.birthYear}</td>`;
+      contents += `<td><a href="${artist.link}">${artist.link}</a></td>`;
+  });
+  return contents;
+}
+
+const tab = document.querySelector("#bhangra");
+tab.innerHTML = createBhangraTable(artists);
+
  //A function to sort artists by name
  function byName(a, b) {
    if (a.name < b.name) return -1;
@@ -41,31 +64,31 @@
    return 0;
  }
 
- console.log(artists.sort(byName));
+// A call to the sort function when the name button is clicked
+const nameSortButton = document.querySelector("#name-button");
+nameSortButton.addEventListener("click", function() {
+  const tab = document.querySelector("#bhangra");
+  tab.innerHTML = createBhangraTable(artists.sort(byName));
+});
 
-//picking a random artist
-function pickArtist() {
-  const randomIndex = Math.floor(Math.random() * artists.length);
-  return artists[randomIndex].name;
-}
+//A method to shuffle an array
+Array.prototype.shuffle = function() {
+  let input = this;
+  for (let i = input.length-1; i >= 0; i--) {
+    let randomIndex = Math.floor(Math.random()*(i+1));
+    let itemAtIndex = input[randomIndex];
+    input[randomIndex] = input[i];
+    input[i] = itemAtIndex;
+  }
+  return input;
+};
 
-console.log(pickArtist());
-
- //A method to shuffle an array
- Array.prototype.shuffle = function() {
-   let input = this;
-   for (let i = input.length-1; i >= 0; i--) {
-     let randomIndex = Math.floor(Math.random()*(i+1));
-     let itemAtIndex = input[randomIndex];
-     input[randomIndex] = input[i];
-     input[i] = itemAtIndex;
-   }
-   return input;
- };
-
-const myArray = [1,2,3,4,5,6,7,8,9,10];
-console.log(myArray.shuffle());
-console.log(artists.shuffle());
+// A call to the shuffle method to sort in random order
+const randomizeButton = document.querySelector("#random-button");
+randomizeButton.addEventListener("click", function() {
+  const tab = document.querySelector("#bhangra");
+  tab.innerHTML = createBhangraTable(artists.shuffle());
+});
 
 // a button to sort the artist by date
 function byYear(a, b) {
@@ -74,36 +97,9 @@ function byYear(a, b) {
   return 0;
 }
 
-// a button to show a randomly selected artist
-const randomButton = document.querySelector("#random-button");
-randomButton.addEventListener("click", showRandomArtist);
-
-function showRandomArtist() {
-  const artist = document.querySelector("#random-artist");
-  artist.innerHTML = pickArtist();
-}
-
- // complete with code to select and populate the table
-
-let paragraph = document.querySelector("#names");
-
- let list = document.createElement("ul");
- list.innerHTML = "";
- for (let i = 0; i < artists.length; i++) {
-   let artist = artists[i];
-   list.innerHTML += `<li>${artist.name}</li>`;
- }
- paragraph.appendChild(list);
-
-const linkParagraph = document.querySelector("#list");
-const list2 = document.createElement("ul");
-artists.forEach(function(artist) {
-  const listItem = document.createElement("li");
-  const anchor = document.createElement("a");
-  anchor.href = artist.link;
-  anchor.innerHTML = artist.name;
-  listItem.appendChild(anchor);
-  list2.appendChild(listItem);
+// A call to the byYear function to sort the artists by birth date
+const dateSortButton = document.querySelector("#date-button");
+dateSortButton.addEventListener("click", function() {
+  const tab = document.querySelector("#bhangra");
+  tab.innerHTML = createBhangraTable(artists.sort(byYear));
 });
-linkParagraph.appendChild(list2)
-//The assignment is going to involve creating table rows instead of list items

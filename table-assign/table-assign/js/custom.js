@@ -41,4 +41,28 @@ fetch('data/artists.json')
 
   console.log(george[0]);
 
-  
+  // a button to show a randomly selected artist
+// const randomButton = document.querySelector("#random-button");
+// randomButton.addEventListener("click", showRandomArtist);
+
+// function showRandomArtist() {
+//   const artist = document.querySelector("#random-artist");
+//   artist.innerHTML = pickArtist();
+// }
+
+
+ //A method to shuffle an array
+//  Array.prototype.shuffle = function() {
+//   let input = this;
+//   for (let i = input.length-1; i >= 0; i--) {
+//     let randomIndex = Math.floor(Math.random()*(i+1));
+//     let itemAtIndex = input[randomIndex];
+//     input[randomIndex] = input[i];
+//     input[i] = itemAtIndex;
+//   }
+//   return input;
+// };
+
+// const myArray = [1,2,3,4,5,6,7,8,9,10];
+// console.log(myArray.shuffle());
+// console.log(artists.shuffle());
