@@ -1,6 +1,7 @@
 /********************************************************************
  * 
- * Your introductory remarks go here.
+ * The following code creates an HTML table for a list of Bhangra
+ * Artists and adds it to an index.html file
  * 
  *******************************************************************/
 
