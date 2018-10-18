@@ -1,0 +1,12 @@
+{
+    "my-second-post": {
+      "title": "My second post",
+      "date" : "October 18, 2018",
+      "pageTitle": "News Item"
+    },
+    "my-first-post": {
+      "title": "My first post",
+      "date": "September 15, 2018",
+      "pageTitle": "News Item"
+    }
+  }

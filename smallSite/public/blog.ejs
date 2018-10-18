@@ -2,8 +2,7 @@
 <div class="jumbotron">
   <div class="container">
     <h1><%= title %></h1>
-    <p>This is an example boilerplate using HTML5 Boilerplate with Bootstrap and Harp. Harp can pre-compile LESS so we use the LESS version of Twitter Bootstrap.</p>
-    <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p>Ben forgot that there comma</p>
   </div>
 </div>
 
@@ -11,14 +10,13 @@
 
   <div class="row">
     <div class="col-lg-12">
-      <p>This is a Port of HTML5 Boilerplate to Harp and makes use of many of Harps features</p>
-      <ul>
-        <li>Templates with EJS and Jade</li>
-        <li>Partials and Layouts</li>
-        <li>Flexible Meta Data</li>
-        <li>Custom 404 Page</li>
-        <li>Pre-compiling LESS</li>
-      </ul>
+      <p>Here are our posts!</p>
+      <% for(var slug in public.posts._data){ %>
+        <h2><a href="/posts/<%= slug %>">
+            <%= public.posts._data[slug].title %></a>
+        </h2>
+        <%- partial("posts/" + slug) %>
+      <% }; %>
     </div>
   </div>
 

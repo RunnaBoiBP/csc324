@@ -10,5 +10,9 @@
 	"404": {
 		"pageTitle": "404",
 		"layout": false
+	},
+	"blog": {
+		"pageTitle": "Blog",
+		"title": "Breaking News"
 	}
 }
