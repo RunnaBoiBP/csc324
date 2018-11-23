@@ -1,0 +1,37 @@
+<% include partial/head %>
+<% include partial/header %>
+<div class="header">
+            <h1>Members Only Area</h1>
+            <h2>Welcome, <%- username %>!</h2>
+        </div>
+<div class="content">
+  
+  <h2>Ben's Running Personal Records:</h2>
+    
+  <p>400 Meter Run- 52.54</p>
+  <p>800 Meter Run- 1:58.75</p>
+  <p>1500 Meter Run- 4:25.10</p>
+  <p>One Mile Run- 4:23.39</p>
+  <p>Two Mile Run- 9:37.88</p>
+  <p>Three Mile Run- 14:46.66</p>
+  <p>5000 Meter Run- 15:37.07</p>
+  <p>8000 Meter Run- 27:24.30</p>
+  <p>10000 Meter Run- 32:26.11</p>
+  <p>Half Marathon- 1:22:35</p>
+  <p>Marathon- 3:43:58</p>
+    
+
+  <% if (role === "administrator") { %>
+    <h2>Get Subscribers</h2>
+    <p>
+      As an administrator, you can request a CSV file of all subscribers.
+    </p>
+    <form method="get" action="/download">
+      <button type="submit" class="pure-button pure-button-primary">Get Subscribers</button>
+   </form>
+  <% } %>
+            
+        </div>
+        <% include partial/footer %>
+
+<% include partial/end %>
